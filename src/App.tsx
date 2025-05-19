@@ -1,5 +1,12 @@
-function App() {
-  return <h1 className="underline">Hallo world</h1>;
-}
+// components/InvoiceDocument.tsx
 
-export default App;
+import { PDFViewer } from "@react-pdf/renderer";
+import TestPdf from "./test/test-pdf";
+
+export default function App() {
+  return (
+    <PDFViewer className="min-h-screen w-full">
+      <TestPdf />
+    </PDFViewer>
+  );
+}
